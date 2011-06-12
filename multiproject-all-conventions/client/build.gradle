@@ -1,0 +1,23 @@
+type = 'swf'
+
+
+configurations {
+	all*.exclude group: 'com.adobe.flex.framework'
+}
+
+dependencies {
+	merged project(':util')
+	merged project(':domain')
+	
+	merged group:'org.graniteds', name:'granite-swc', version:graniteds_version, type:'swc'
+	internal group:'org.graniteds', name:'granite-essentials-swc', version:graniteds_version, type:'swc'
+	merged group: 'org.springextensions.actionscript', name: 'spring-actionscript-core', version: spring_actionscript_core_version, ext: 'swc'
+	merged group: 'org.as3commons', name: 'as3commons-collections', version: as3commons_collections_version, ext: 'swc'
+	merged group: 'org.as3commons', name: 'as3commons-lang', version: as3commons_lang_version, ext: 'swc'
+}
+
+srcDirs.add('/src/main/locales/{locale}')
+
+additionalCompilerOptions = [
+		'-locale=en_US'
+]
