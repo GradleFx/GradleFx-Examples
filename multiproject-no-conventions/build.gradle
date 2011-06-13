@@ -1,0 +1,41 @@
+buildscript {
+	repositories {
+		mavenLocal()
+	}
+	dependencies {
+		classpath group: 'org.gradlefx', name: 'gradlefx', version: '0.2'
+	}
+}
+
+subprojects {
+
+	apply plugin: 'gradlefx'
+
+	version = '1.0-SNAPSHOT'
+
+    repositories {
+        mavenCentral()
+	    mavenLocal()
+        mavenRepo name: 'yoolab-releases',      urls: "http://projects.yoolab.org/maven/content/repositories/releases"
+        mavenRepo name: 'yoolab-snapshots',     urls: "http://projects.yoolab.org/maven/content/repositories/snapshots"
+    }
+
+    //dependency versions
+    spring_actionscript_core_version = '1.2-SNAPSHOT'
+    as3commons_collections_version = '1.1'
+    as3commons_lang_version = '0.3.2'
+    graniteds_version = '2.2.0.SP1'
+
+    dependencies {
+        external group: 'org.springextensions.actionscript', name: 'spring-actionscript-core', version: spring_actionscript_core_version, ext: 'swc'
+        external group: 'org.as3commons', name: 'as3commons-collections', version: as3commons_collections_version, ext: 'swc'
+        external group: 'org.as3commons', name: 'as3commons-lang', version: as3commons_lang_version, ext: 'swc'
+
+	    external group: 'org.graniteds', name: 'granite-swc', version: graniteds_version, ext: 'swc'
+        external group: 'org.graniteds', name: 'granite-essentials-swc', version: graniteds_version, ext: 'swc'
+    }
+	
+	flexHome = System.getenv('CUSTOM_FLEX_HOME')
+	publishDir = 'publishDirectory'
+	
+}

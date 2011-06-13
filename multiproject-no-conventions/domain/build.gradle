@@ -1,0 +1,14 @@
+type = 'swc'
+output = 'wackyDoodlesDomain.swc'
+
+srcDirs = [
+	'/src/main/as'
+]
+
+resourceDirs = [
+	'/src/main/asresources'
+]
+
+dependencies {
+	external project(':util')
+}
