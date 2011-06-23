@@ -3,7 +3,7 @@ buildscript {
 		mavenLocal()
 	}
 	dependencies {
-		classpath group: 'org.gradlefx', name: 'gradlefx', version: '0.2'
+		classpath group: 'org.gradlefx', name: 'gradlefx', version: '0.2.2'
 	}
 }
 

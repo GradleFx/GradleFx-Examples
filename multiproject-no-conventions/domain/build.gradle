@@ -1,5 +1,4 @@
 type = 'swc'
-output = 'wackyDoodlesDomain.swc'
 
 srcDirs = [
 	'/src/main/as'

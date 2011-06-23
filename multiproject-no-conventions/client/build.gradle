@@ -25,7 +25,6 @@ resourceDirs = [
 ]
 
 mainClass = 'org/gradlefx/MyProgram.mxml'
-output = "wackydoodles.swf"
 
 additionalCompilerOptions = [
         '-use-network=true',
@@ -39,9 +38,9 @@ htmlWrapper = [
 	height:              '80%',
 	width:               '80%',
 	application:         'Wacky Doodles',
-	swf:                 '../build/wackydoodles',
+	swf:                 '../build/' + project.output,
 	history:             'false',
 	'express-install':   'false',
 	'version-detection': 'false',
-	output:              'publish'
+	output:              project.file('publish')
 ]
