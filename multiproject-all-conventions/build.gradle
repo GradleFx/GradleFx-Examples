@@ -1,9 +1,9 @@
 buildscript {
 	repositories {
-		mavenLocal()
+		mavenRepo name: 'sonatype-oss',     urls: "https://oss.sonatype.org/content/groups/public"
 	}
 	dependencies {
-		classpath group: 'org.gradlefx', name: 'gradlefx', version: '0.2.2'
+		classpath group: 'org.gradlefx', name: 'gradlefx', version: '0.2.4'
 	}
 }
 
