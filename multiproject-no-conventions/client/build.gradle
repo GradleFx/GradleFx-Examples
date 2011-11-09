@@ -16,12 +16,12 @@ dependencies {
 }
 
 srcDirs = [
-	'/src/main/flex',
-	'/src/main/locales/{locale}'
+	'src/main/flex',
+	'src/main/locales/{locale}'
 ]
 
 resourceDirs = [
-	'/src/main/flexresources'
+	'src/main/flexresources'
 ]
 
 mainClass = 'org/gradlefx/MyProgram.mxml'

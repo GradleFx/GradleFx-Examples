@@ -16,7 +16,7 @@ dependencies {
 	merged group: 'org.as3commons', name: 'as3commons-lang', version: as3commons_lang_version, ext: 'swc'
 }
 
-srcDirs.add('/src/main/locales/{locale}')
+srcDirs.add('src/main/locales/{locale}')
 
 additionalCompilerOptions = [
 		'-locale=en_US'

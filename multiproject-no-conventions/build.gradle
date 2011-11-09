@@ -1,9 +1,9 @@
 buildscript {
 	repositories {
-		mavenRepo name: 'sonatype-oss',     urls: "https://oss.sonatype.org/content/groups/public"
+		mavenCentral()
 	}
 	dependencies {
-		classpath group: 'org.gradlefx', name: 'gradlefx', version: '0.2.4'
+		classpath group: 'org.gradlefx', name: 'gradlefx', version: '0.3.2'
 	}
 }
 
@@ -16,8 +16,8 @@ subprojects {
     repositories {
         mavenCentral()
 	    mavenLocal()
-        mavenRepo name: 'yoolab-releases',      urls: "http://projects.yoolab.org/maven/content/repositories/releases"
-        mavenRepo name: 'yoolab-snapshots',     urls: "http://projects.yoolab.org/maven/content/repositories/snapshots"
+        mavenRepo name: 'yoolab-releases',      url: "http://projects.yoolab.org/maven/content/repositories/releases"
+        mavenRepo name: 'yoolab-snapshots',     url: "http://projects.yoolab.org/maven/content/repositories/snapshots"
     }
 
     //dependency versions
@@ -39,5 +39,10 @@ subprojects {
 	publishDir = 'publishDirectory'
 
     output = name + '-' + version
+
+    jvmArguments = [
+        '-Xmx1024m',
+        '-Xms512m'
+    ]
 
 }

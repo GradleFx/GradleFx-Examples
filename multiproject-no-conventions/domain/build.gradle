@@ -1,11 +1,11 @@
 type = 'swc'
 
 srcDirs = [
-	'/src/main/as'
+	'src/main/as'
 ]
 
 resourceDirs = [
-	'/src/main/asresources'
+	'src/main/asresources'
 ]
 
 dependencies {
