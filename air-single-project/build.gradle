@@ -1,0 +1,27 @@
+buildscript {
+	repositories {
+		//mavenCentral()
+		mavenLocal()
+	}
+	dependencies {
+		classpath group: 'org.gradlefx', name: 'gradlefx', version: '0.3.2'
+	}
+}
+
+apply plugin: 'gradlefx'
+
+version = '1.0-SNAPSHOT'
+type = 'air'
+
+repositories {
+	mavenRepo name: 'yoolab-releases',      url: "http://projects.yoolab.org/maven/content/repositories/releases"
+}
+
+//dependency versions
+as3commons_lang_version = '0.3.2'
+
+dependencies {
+	merged group: 'org.as3commons', name: 'as3commons-lang', version: as3commons_lang_version, ext: 'swc'
+}
+
+air.storepass = 'gradlefx'
