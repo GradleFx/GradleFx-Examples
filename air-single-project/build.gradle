@@ -1,10 +1,9 @@
 buildscript {
 	repositories {
-		//mavenCentral()
-		mavenLocal()
+		mavenCentral()
 	}
 	dependencies {
-		classpath group: 'org.gradlefx', name: 'gradlefx', version: '0.3.2'
+		classpath group: 'org.gradlefx', name: 'gradlefx', version: '0.4'
 	}
 }
 

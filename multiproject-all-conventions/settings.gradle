@@ -1,1 +1,1 @@
-include 'client', 'domain', 'util'
+include 'client', 'domain', 'util', 'assets'
