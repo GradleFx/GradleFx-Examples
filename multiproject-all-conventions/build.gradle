@@ -3,7 +3,7 @@ buildscript {
 		mavenCentral()
 	}
 	dependencies {
-		classpath group: 'org.gradlefx', name: 'gradlefx', version: '0.3.2'
+		classpath group: 'org.gradlefx', name: 'gradlefx', version: '0.4'
 	}
 }
 
@@ -34,4 +34,5 @@ subprojects {
 	    external group: 'org.graniteds', name: 'granite-swc', version: graniteds_version, ext: 'swc'
         external group: 'org.graniteds', name: 'granite-essentials-swc', version: graniteds_version, ext: 'swc'
     }
+	
 }

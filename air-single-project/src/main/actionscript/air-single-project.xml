@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<application xmlns="http://ns.adobe.com/air/application/2.6">
+	<id>org.gradlefx.examples.airsingleproject</id>
+	<filename>AirSingleProject</filename>
+	<name>Air Single Project Example</name>
+	<versionNumber>1.0</versionNumber>
+	<initialWindow>
+		<content>build/air-single-project.swf</content>
+		<width>800</width>
+		<height>600</height>
+	</initialWindow>
+</application>
