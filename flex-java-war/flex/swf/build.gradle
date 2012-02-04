@@ -1,0 +1,5 @@
+type='swf'
+
+dependencies {
+    merged project(':flex:swc')
+}

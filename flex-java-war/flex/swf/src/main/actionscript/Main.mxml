@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<s:Application xmlns:fx="http://ns.adobe.com/mxml/2009" xmlns:s="library://ns.adobe.com/flex/spark"
+        width="100%"
+        height="100%">
+
+    <fx:Script>
+    <![CDATA[
+        import org.gradlefx.Person;
+        import mx.controls.Alert;
+    ]]>
+    </fx:Script>
+
+
+    <s:layout>
+        <s:VerticalLayout horizontalAlign="center" verticalAlign="middle"/>
+    </s:layout>
+
+    <s:Label text="{new org.gradlefx.Person('Koen').toString()}"/>
+    <s:Button click="Alert.show('Hello, world')" label="Say Hello"/>
+</s:Application>

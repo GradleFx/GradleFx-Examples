@@ -1,0 +1,13 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath group: 'org.gradlefx', name: 'gradlefx', version: '0.4.1'
+    }
+}
+
+subprojects {
+    apply plugin: 'gradlefx'
+}
