@@ -1,0 +1,4 @@
+include 'flex',
+            'flex:swf', 'flex:swc',
+        'java',
+            'java:war', 'java:dto'

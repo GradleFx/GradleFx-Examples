@@ -1,0 +1,12 @@
+apply plugin: 'war'
+apply plugin: 'jetty'
+
+
+war {
+	dependsOn ':flex:swf:compile'
+	from(project(':flex:swf').buildDir)
+}
+
+dependencies {
+    compile project(':java:dto')
+}

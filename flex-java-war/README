@@ -1,0 +1,3 @@
+This example project contains a flex application which will be copied into a war file in the java project.
+To package the war execute "gradle war"
+To package the war and start the jetty server execute "gradle jettyRunWar", then go to http://localhost:8080/war

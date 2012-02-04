@@ -1,0 +1,4 @@
+allprojects {
+    group = 'org.gradlefx.flexjavawar'
+    version = '0.1-SNAPSHOT'
+}
