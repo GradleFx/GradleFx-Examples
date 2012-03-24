@@ -1,5 +1,5 @@
 type = 'swc'
 
 dependencies {
-	external project(':multiproject-all-conventions:util')
+	external project(':util')
 }

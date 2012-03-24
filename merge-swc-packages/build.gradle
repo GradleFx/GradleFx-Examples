@@ -1,11 +1,18 @@
-defaultTasks 'clean', 'test', 'compile'
+buildscript {
+	repositories {
+		mavenCentral()
+	}
+	dependencies {
+		classpath group: 'org.gradlefx', name: 'gradlefx', version: '0.4.2'
+	}
+}
 
 apply plugin: 'gradlefx'
 type = 'swc'
 
 dependencies {
-	internal project(':merge-swc-packages:util')
-	internal project(':merge-swc-packages:domain')
+	internal project(':util')
+	internal project(':domain')
 }
 
 subprojects {
@@ -16,7 +23,6 @@ subprojects {
 
     repositories {
         mavenCentral()
-	    mavenLocal()
         mavenRepo name: 'yoolab-releases',      url: "http://projects.yoolab.org/maven/content/repositories/releases"
         mavenRepo name: 'yoolab-snapshots',     url: "http://projects.yoolab.org/maven/content/repositories/snapshots"
     }
