@@ -8,6 +8,8 @@ dependencies {
 	merged project(':util')
 	merged project(':domain')
 	
+	theme files("${flexHome}/frameworks/themes/Wireframe/wireframe.swc")
+	
 	merged group:'org.graniteds', name:'granite-swc', version:graniteds_version, type:'swc'
 	internal group:'org.graniteds', name:'granite-essentials-swc', version:graniteds_version, type:'swc'
 	merged group: 'org.springextensions.actionscript', name: 'spring-actionscript-core', version: spring_actionscript_core_version, ext: 'swc'
@@ -15,9 +17,11 @@ dependencies {
 	merged group: 'org.as3commons', name: 'as3commons-lang', version: as3commons_lang_version, ext: 'swc'
 }
 
+localeDir = 'src/main/locales'
+locales = ['en_US']
+
 srcDirs = [
-	'src/main/flex',
-	'src/main/locales/{locale}'
+	'src/main/flex'
 ]
 
 resourceDirs = [
@@ -28,7 +32,6 @@ mainClass = 'org/gradlefx/MyProgram.mxml'
 
 additionalCompilerOptions = [
         '-use-network=true',
-		'-locale=en_US',
 		'-keep-as3-metadata+=Autowired,RemoteClass'
 ]
 

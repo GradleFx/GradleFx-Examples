@@ -13,14 +13,14 @@ version = '1.0-SNAPSHOT'
 type = 'swc'
 
 repositories {
-    mavenRepo name: 'glassfish-releases',   url: "http://maven.glassfish.org/content/groups/public"
+    mavenRepo name: 'glassfish-releases',   url: "http://opensource.adobe.com/svn/opensource/cairngorm3/maven-repository"
 }
 
 //dependency versions
-hamcrest_as3_version = '1.1.0'
+hamcrest_as3_version = '1.1'
 
 dependencies {
-    test   group: 'hamcrest-as3',   name: 'hamcrest-as3',    version: hamcrest_as3_version,    ext: 'swc'
+    test   group: 'org.hamcrest',   name: 'hamcrest-as3',    version: hamcrest_as3_version,    ext: 'swc'
     test files("${flexUnit.home}/flexunit-4.1.0-8-flex_4.1.0.16076.swc",
            "${flexUnit.home}/flexunit-uilistener-4.1.0-8-4.1.0.16076.swc",
            "${flexUnit.home}/flexunit-cilistener-4.1.0-8-4.1.0.16076.swc")

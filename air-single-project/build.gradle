@@ -24,3 +24,4 @@ dependencies {
 }
 
 air.storepass = 'gradlefx'
+air.includeFileTrees = [fileTree(dir: 'src/main/actionscript/', include: 'assets/appIcon.png')]

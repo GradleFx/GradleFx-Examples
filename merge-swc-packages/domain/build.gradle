@@ -1,0 +1,5 @@
+type = 'swc'
+
+dependencies {
+	external project(':util')
+}
