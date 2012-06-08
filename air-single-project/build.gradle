@@ -3,7 +3,7 @@ buildscript {
 		mavenCentral()
 	}
 	dependencies {
-		classpath group: 'org.gradlefx', name: 'gradlefx', version: '0.4.1'
+		classpath group: 'org.gradlefx', name: 'gradlefx', version: '0.5'
 	}
 }
 
@@ -17,7 +17,7 @@ repositories {
 }
 
 //dependency versions
-as3commons_lang_version = '0.3.2'
+ext.as3commons_lang_version = '0.3.2'
 
 dependencies {
 	merged group: 'org.as3commons', name: 'as3commons-lang', version: as3commons_lang_version, ext: 'swc'
