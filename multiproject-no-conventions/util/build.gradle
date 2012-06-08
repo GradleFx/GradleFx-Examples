@@ -1,5 +1,9 @@
 type = 'swc'
 
+//don't use the Flex framework when compiling:
+//this is a pure ActionScript project
+frameworkLinkage = 'none' 
+
 srcDirs = [
 	'src/main/as'
 ]

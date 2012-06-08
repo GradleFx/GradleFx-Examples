@@ -1,5 +1,8 @@
 type = 'swf'
 
+//the default for 'swf' (and other non-library types) is 'rsl'
+frameworkLinkage = 'merged'
+
 configurations {
 	all*.exclude group: 'com.adobe.flex.framework'
 }

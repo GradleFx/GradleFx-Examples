@@ -1,5 +1,8 @@
 type = 'swc'
 
+//the default for a 'swc' library project is 'external'
+frameworkLinkage = 'merged'
+
 srcDirs = [
 	'src/main/as'
 ]
