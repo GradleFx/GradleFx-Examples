@@ -21,10 +21,15 @@ ext.hamcrest_as3_version = '1.1'
 
 dependencies {
     test   group: 'org.hamcrest',   name: 'hamcrest-as3',    version: hamcrest_as3_version,    ext: 'swc'
-    test files("${flexUnit.home}/flexunit-4.1.0-8-flex_4.1.0.16076.swc",
-           "${flexUnit.home}/flexunit-uilistener-4.1.0-8-4.1.0.16076.swc",
-           "${flexUnit.home}/flexunit-cilistener-4.1.0-8-4.1.0.16076.swc")
+	test files(project.file('libs/flexUnitTasks-4.1.0-8.jar').absolutePath,
+			   project.file('libs/flexunit-4.1.0-8-flex_4.1.0.16076.swc').absolutePath,
+			   project.file('libs/flexunit-cilistener-4.1.0-8-4.1.0.16076.swc').absolutePath)
 }
 
-flexUnit.antTasksJar = 'flexUnitTasks-4.1.0-8.jar'
-testClass = 'org/gradlefx/flexunitexample/TestRunner.mxml'
+task wrapper(type: Wrapper) {
+    group = 'Buildmaster'
+    description = 'Generates gradlew and gradlew.bat bootstrap scripts'
+    gradleVersion = '1.0-rc-3'
+    // place jar file and properties into a subdirectory to avoid root dir clutter
+    jarFile = 'buildSrc/wrapper/gradle.jar'
+}
