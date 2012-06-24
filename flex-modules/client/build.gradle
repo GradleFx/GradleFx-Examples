@@ -1,0 +1,5 @@
+type = 'swf'
+
+additionalCompilerOptions = [
+	"-link-report=" + project.file('build/report.xml').absolutePath
+]
