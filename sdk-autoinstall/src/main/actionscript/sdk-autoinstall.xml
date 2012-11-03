@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<application xmlns="http://ns.adobe.com/air/application/3.1">
+	<id>org.gradlefx.examples.airsingleproject</id>
+	<filename>AirSingleProject</filename>
+	<name>Air Single Project Example</name>
+	<versionNumber>1.0</versionNumber>
+	<initialWindow>
+		<content>build/sdk-autoinstall.swf</content>
+		<width>800</width>
+		<height>600</height>
+	</initialWindow>
+	<icon> 
+        <image32x32>assets/appIcon.png</image32x32> 
+    </icon> 
+</application>
