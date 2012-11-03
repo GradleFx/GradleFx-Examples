@@ -1,6 +1,0 @@
-type = 'swf'
-
-additionalCompilerOptions = [
-	"-load-externs=" + project(':client').file('build/report.xml').absolutePath,
-	"-optimize=true"
-]
