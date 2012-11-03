@@ -38,15 +38,15 @@ additionalCompilerOptions = [
 		'-keep-as3-metadata+=Autowired,RemoteClass'
 ]
 
-htmlWrapper = [
-	title:               'Wacky Doodles Page',
-	file:                'wackydoodles.html',
-	height:              '80%',
-	width:               '80%',
-	application:         'Wacky Doodles',
-	swf:                 '../build/' + project.output,
-	history:             'false',
-	'express-install':   'false',
-	'version-detection': 'false',
-	output:              project.file('publish')
-]
+htmlWrapper {
+	title =               'Wacky Doodles Page'
+	file =                'wackydoodles.html'
+	height =              '80%'
+	width =               '80%'
+	application =         'Wacky Doodles'
+	swf =                 '../build/' + project.output
+	history =             'false'
+	expressInstall =      'false'
+	versionDetection =    'false'
+	output =              project.file('publish')
+}
