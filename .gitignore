@@ -4,4 +4,4 @@ build
 *.iml
 .orig
 publish
-
+*/*/doc/*
