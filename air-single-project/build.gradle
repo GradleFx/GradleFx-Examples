@@ -3,7 +3,7 @@ buildscript {
 		mavenCentral()
 	}
 	dependencies {
-		classpath group: 'org.gradlefx', name: 'gradlefx', version: '0.5'
+		classpath group: 'org.gradlefx', name: 'gradlefx', version: '0.6'
 	}
 }
 
@@ -23,5 +23,7 @@ dependencies {
 	merged group: 'org.as3commons', name: 'as3commons-lang', version: as3commons_lang_version, ext: 'swc'
 }
 
-air.storepass = 'gradlefx'
-air.includeFileTrees = [fileTree(dir: 'src/main/actionscript/', include: 'assets/appIcon.png')]
+air {
+	storepass = 'gradlefx'
+	includeFileTrees = [fileTree(dir: 'src/main/actionscript/', include: 'assets/appIcon.png')]
+} 

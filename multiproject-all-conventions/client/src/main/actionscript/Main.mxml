@@ -22,7 +22,7 @@
     </s:layout>
 
     <controls:Image source="@Embed('/assets/alertIcon.jpg')" />
-    <controls:Image source="@Embed('/images/warning-icon.png')" />
+    <controls:Image source="@Embed('images/warning-icon.png')" />
     <s:Button click="Alert.show(alertMessage)" label="{resourceManager.getString('resources', 'helloButton.label')}"/>
 
 </s:Application>

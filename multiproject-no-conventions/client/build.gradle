@@ -13,8 +13,8 @@ dependencies {
 	
 	theme files("${flexHome}/frameworks/themes/Wireframe/wireframe.swc")
 	
-	merged group:'org.graniteds', name:'granite-swc', version:graniteds_version, type:'swc'
-	internal group:'org.graniteds', name:'granite-essentials-swc', version:graniteds_version, type:'swc'
+	merged group:'org.graniteds', name:'granite-swc', version:graniteds_version, ext:'swc'
+	internal group:'org.graniteds', name:'granite-essentials-swc', version:graniteds_version, ext:'swc'
 	merged group: 'org.springextensions.actionscript', name: 'spring-actionscript-core', version: spring_actionscript_core_version, ext: 'swc'
 	merged group: 'org.as3commons', name: 'as3commons-collections', version: as3commons_collections_version, ext: 'swc'
 	merged group: 'org.as3commons', name: 'as3commons-lang', version: as3commons_lang_version, ext: 'swc'
@@ -38,15 +38,15 @@ additionalCompilerOptions = [
 		'-keep-as3-metadata+=Autowired,RemoteClass'
 ]
 
-htmlWrapper = [
-	title:               'Wacky Doodles Page',
-	file:                'wackydoodles.html',
-	height:              '80%',
-	width:               '80%',
-	application:         'Wacky Doodles',
-	swf:                 '../build/' + project.output,
-	history:             'false',
-	'express-install':   'false',
-	'version-detection': 'false',
-	output:              project.file('publish')
-]
+htmlWrapper {
+	title =               'Wacky Doodles Page'
+	file =                'wackydoodles.html'
+	height =              '80%'
+	width =               '80%'
+	application =         'Wacky Doodles'
+	swf =                 '../build/' + project.output
+	history =             'false'
+	expressInstall =      'false'
+	versionDetection =    'false'
+	output =              project.file('publish')
+}
