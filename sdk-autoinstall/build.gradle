@@ -3,7 +3,7 @@ buildscript {
 		mavenCentral()
 	}
 	dependencies {
-		classpath group: 'org.gradlefx', name: 'gradlefx', version: '0.6'
+		classpath group: 'org.gradlefx', name: 'gradlefx', version: '0.6.4'
 	}
 }
 
@@ -15,7 +15,7 @@ version = '1.0-SNAPSHOT'
 repositories {
 	add(new org.apache.ivy.plugins.resolver.URLResolver()) {
 		name = 'Apache'
-		addArtifactPattern 'http://apache.cu.be/incubator/flex/4.8.0-incubating/binaries/[module]-[revision]-incubating-bin.[ext]'
+		addArtifactPattern 'http://apache.cu.be/flex/[revision]/binaries/[module]-[revision]-bin.[ext]'
 	}
 	
 	add(new org.apache.ivy.plugins.resolver.URLResolver()) {
@@ -25,7 +25,7 @@ repositories {
 }
 
 dependencies {
-	flexSDK group: 'org.apache', name: 'apache-flex-sdk', version: '4.8.0', ext: 'tar.gz'
+	flexSDK group: 'org.apache', name: 'apache-flex-sdk', version: '4.9.1', ext: 'tar.gz'
 	airSDK group: 'com.adobe', name: 'AdobeAIRSDK', version: '3.4', ext: 'zip'
 }
 
@@ -37,3 +37,11 @@ air {
 	storepass = 'gradlefx'
 	includeFileTrees = [fileTree(dir: 'src/main/actionscript/', include: 'assets/appIcon.png')]
 } 
+
+task wrapper(type: Wrapper) {
+    group = 'Buildmaster'
+    description = 'Generates gradlew and gradlew.bat bootstrap scripts'
+    gradleVersion = '1.4'
+    // place jar file and properties into a subdirectory to avoid root dir clutter
+    jarFile = 'buildSrc/wrapper/gradle.jar'
+}
