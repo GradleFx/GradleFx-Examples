@@ -1,0 +1,36 @@
+buildscript {
+	repositories {
+		mavenLocal()
+		mavenCentral()
+	}
+	dependencies {
+		classpath group: 'org.gradlefx', name: 'gradlefx', version: '0.6.5'
+	}
+}
+
+apply plugin: 'gradlefx'
+apply plugin: 'scaffold'
+
+version = '1.0-SNAPSHOT'
+type = 'mobile'
+
+repositories {
+	add(new org.apache.ivy.plugins.resolver.URLResolver()) {
+		name = 'Apache'
+		addArtifactPattern 'http://apache.cu.be/flex/[revision]/binaries/[module]-[revision]-bin.[ext]'
+	}
+	
+	add(new org.apache.ivy.plugins.resolver.URLResolver()) {
+		name = 'Adobe Air SDK'
+		addArtifactPattern 'http://download.macromedia.com/air/win/download/[revision]/[module].[ext]'
+	}
+}
+
+dependencies {
+	flexSDK group: 'org.apache', name: 'apache-flex-sdk', version: '4.9.1', ext: 'tar.gz'
+	airSDK group: 'com.adobe', name: 'AdobeAIRSDK', version: '3.4', ext: 'zip'
+}
+
+air {
+	storepass = 'gradlefx'
+} 
