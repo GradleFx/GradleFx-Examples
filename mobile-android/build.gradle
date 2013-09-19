@@ -27,10 +27,14 @@ repositories {
 }
 
 dependencies {
-	flexSDK group: 'org.apache', name: 'apache-flex-sdk', version: '4.9.1', ext: 'tar.gz'
-	airSDK group: 'com.adobe', name: 'AdobeAIRSDK', version: '3.4', ext: 'zip'
+	flexSDK group: 'org.apache', name: 'apache-flex-sdk', version: '4.10.0', ext: 'zip'
+	airSDK group: 'com.adobe', name: 'AdobeAIRSDK', version: '3.8', ext: 'zip'
 }
 
 air {
 	storepass = 'gradlefx'
 } 
+
+sdkAutoInstall {
+	showPrompts = false
+}
