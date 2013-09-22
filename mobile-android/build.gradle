@@ -1,5 +1,6 @@
 buildscript {
 	repositories {
+		mavenLocal()
 		mavenCentral()
 	}
 	dependencies {
@@ -8,9 +9,10 @@ buildscript {
 }
 
 apply plugin: 'gradlefx'
+apply plugin: 'scaffold'
 
-type = 'air'
 version = '1.0-SNAPSHOT'
+type = 'mobile'
 
 repositories {
 	add(new org.apache.ivy.plugins.resolver.URLResolver()) {
@@ -25,23 +27,14 @@ repositories {
 }
 
 dependencies {
-	flexSDK group: 'org.apache', name: 'apache-flex-sdk', version: '4.9.1', ext: 'tar.gz'
-	airSDK group: 'com.adobe', name: 'AdobeAIRSDK', version: '3.4', ext: 'zip'
-}
-
-sdkAutoInstall {
-	showPrompts	= false
+	flexSDK group: 'org.apache', name: 'apache-flex-sdk', version: '4.10.0', ext: 'zip'
+	airSDK group: 'com.adobe', name: 'AdobeAIRSDK', version: '3.8', ext: 'zip'
 }
 
 air {
 	storepass = 'gradlefx'
-	includeFileTrees = [fileTree(dir: 'src/main/actionscript/', include: 'assets/appIcon.png')]
 } 
 
-task wrapper(type: Wrapper) {
-    group = 'Buildmaster'
-    description = 'Generates gradlew and gradlew.bat bootstrap scripts'
-    gradleVersion = '1.4'
-    // place jar file and properties into a subdirectory to avoid root dir clutter
-    jarFile = 'buildSrc/wrapper/gradle.jar'
+sdkAutoInstall {
+	showPrompts = false
 }
