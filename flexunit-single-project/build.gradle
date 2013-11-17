@@ -3,7 +3,7 @@ buildscript {
 		mavenCentral()
 	}
 	dependencies {
-		classpath group: 'org.gradlefx', name: 'gradlefx', version: '0.7'
+		classpath group: 'org.gradlefx', name: 'gradlefx', version: '0.7.1'
 	}
 }
 
@@ -13,7 +13,10 @@ version = '1.0-SNAPSHOT'
 type = 'swc'
 
 repositories {
-    mavenRepo name: 'glassfish-releases',   url: "http://opensource.adobe.com/svn/opensource/cairngorm3/maven-repository"
+    maven {
+		name 'glassfish-releases'
+		url "http://opensource.adobe.com/svn/opensource/cairngorm3/maven-repository"
+	}
 }
 
 //dependency versions
