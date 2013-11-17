@@ -3,7 +3,7 @@ buildscript {
 		mavenCentral()
 	}
 	dependencies {
-		classpath group: 'org.gradlefx', name: 'gradlefx', version: '0.7'
+		classpath group: 'org.gradlefx', name: 'gradlefx', version: '0.7.1'
 	}
 }
 
@@ -13,14 +13,14 @@ type = 'air'
 version = '1.0-SNAPSHOT'
 
 repositories {
-	add(new org.apache.ivy.plugins.resolver.URLResolver()) {
-		name = 'Apache'
-		addArtifactPattern 'http://apache.cu.be/flex/[revision]/binaries/[module]-[revision]-bin.[ext]'
+	ivy {
+		name 'Apache'
+		artifactPattern 'http://apache.cu.be/flex/[revision]/binaries/[module]-[revision]-bin.[ext]'
 	}
 	
-	add(new org.apache.ivy.plugins.resolver.URLResolver()) {
-		name = 'Adobe Air SDK'
-		addArtifactPattern 'http://download.macromedia.com/air/win/download/[revision]/[module].[ext]'
+	ivy {
+		name 'Adobe Air SDK'
+		artifactPattern 'http://download.macromedia.com/air/win/download/[revision]/[module].[ext]'
 	}
 }
 
