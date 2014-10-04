@@ -41,8 +41,8 @@ additionalCompilerOptions = [
 htmlWrapper {
 	title =               'Wacky Doodles Page'
 	file =                'wackydoodles.html'
-	height =              '80%'
-	width =               '80%'
+	percentHeight =       80
+	percentWidth =        80
 	application =         'Wacky Doodles'
 	swf =                 '../build/' + project.output
 	history =             'false'
