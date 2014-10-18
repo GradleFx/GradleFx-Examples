@@ -2,3 +2,11 @@ allprojects {
     group = 'org.gradlefx.flexjavawar'
     version = '0.1-SNAPSHOT'
 }
+
+task wrapper(type: Wrapper) {
+    group = 'Buildmaster'
+    description = 'Generates gradlew and gradlew.bat bootstrap scripts'
+    gradleVersion = '2.1'
+    // place jar file and properties into a subdirectory to avoid root dir clutter
+    jarFile = 'buildSrc/wrapper/gradle.jar'
+}

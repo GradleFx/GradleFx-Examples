@@ -1,9 +1,10 @@
 buildscript {
 	repositories {
+		mavenLocal()
 		mavenCentral()
 	}
 	dependencies {
-		classpath group: 'org.gradlefx', name: 'gradlefx', version: '0.8.1'
+		classpath group: 'org.gradlefx', name: 'gradlefx', version: '1.0'
 	}
 }
 
@@ -15,7 +16,7 @@ type = 'air'
 repositories {
 	maven {
 		name 'yoolab-releases'
-		url: "http://projects.yoolab.org/maven/content/repositories/releases"
+		url "http://projects.yoolab.org/maven/content/repositories/releases"
 	}
 }
 
@@ -28,5 +29,21 @@ dependencies {
 
 air {
 	storepass = 'gradlefx'
-	includeFileTrees = [fileTree(dir: 'src/main/actionscript/', include: 'assets/appIcon.png')]
+	includeFileTrees = [
+		fileTree(dir: 'src/main/actionscript/', include: ['images'])
+	]
+	
+	fileOptions = [
+		'-C',
+		'src/main/actionscript/',
+		'assets'
+	]
 } 
+
+task wrapper(type: Wrapper) {
+    group = 'Buildmaster'
+    description = 'Generates gradlew and gradlew.bat bootstrap scripts'
+    gradleVersion = '2.1'
+    // place jar file and properties into a subdirectory to avoid root dir clutter
+    jarFile = 'buildSrc/wrapper/gradle.jar'
+}
