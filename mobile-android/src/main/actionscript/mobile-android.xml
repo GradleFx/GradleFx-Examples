@@ -8,7 +8,7 @@
 	<versionNumber>1.0</versionNumber>
 
 	<initialWindow>
-		<content>build/mobile-android.swf</content>
+		<content>mobile-android.swf</content>
 
 		<autoOrients>true</autoOrients>
 
