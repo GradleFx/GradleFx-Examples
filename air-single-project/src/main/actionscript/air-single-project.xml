@@ -5,7 +5,7 @@
 	<name>Air Single Project Example</name>
 	<versionNumber>1.0</versionNumber>
 	<initialWindow>
-		<content>build/air-single-project.swf</content>
+		<content>air-single-project.swf</content>
 		<width>800</width>
 		<height>600</height>
 	</initialWindow>
