@@ -4,7 +4,7 @@ buildscript {
 		mavenCentral()
 	}
 	dependencies {
-		classpath group: 'org.gradlefx', name: 'gradlefx', version: '1.1'
+		classpath group: 'org.gradlefx', name: 'gradlefx', version: '1.3.3'
 	}
 }
 
@@ -31,9 +31,13 @@ dependencies {
 	airSDK group: 'com.adobe', name: 'AdobeAIRSDK', version: '15.0', ext: 'zip'
 }
 
+additionalCompilerOptions = [
+	'-swf-version=26'
+]
+
 air {
 	storepass = 'gradlefx'
-	
+	tsa = 'none'
 	includeFileTrees = [
 		fileTree(dir: 'src/main/actionscript/', include: ['assets/*'])
 	]

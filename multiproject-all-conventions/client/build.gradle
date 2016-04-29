@@ -12,8 +12,5 @@ dependencies {
 
 	merged group:'org.graniteds', name:'granite-swc', version:graniteds_version, ext:'swc'
 	internal group:'org.graniteds', name:'granite-essentials-swc', version:graniteds_version, ext:'swc'
-	merged group: 'org.springextensions.actionscript', name: 'spring-actionscript-core', version: spring_actionscript_core_version, ext: 'swc'
-	merged group: 'org.as3commons', name: 'as3commons-collections', version: as3commons_collections_version, ext: 'swc'
-	merged group: 'org.as3commons', name: 'as3commons-lang', version: as3commons_lang_version, ext: 'swc'
 }
 
