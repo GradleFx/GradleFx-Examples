@@ -4,12 +4,6 @@
     <fx:Script>
         <![CDATA[
         import mx.controls.Alert;
-
-        import org.as3commons.lang.StringUtils;
-
-        private function get alertMessage():String {
-            return StringUtils.deleteWhitespace("Hello world without spaces");
-        }
         ]]>
     </fx:Script>
 
@@ -22,6 +16,6 @@
     </s:layout>
 
     <controls:Image source="@Embed('/assets/alertIcon.jpg')"/>
-    <s:Button click="Alert.show(alertMessage)" label="{resourceManager.getString('resources', 'helloButton.label')}"/>
+    <s:Button label="{resourceManager.getString('resources', 'helloButton.label')}"/>
 
 </s:Application>
